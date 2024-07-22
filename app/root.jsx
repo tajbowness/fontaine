@@ -6,9 +6,7 @@ import {
   Scripts,
   ScrollRestoration
 } from "@remix-run/react"
-import NavBar from "./comps/Navbar"
 import "../styles.scss"
-import { useLoaderData } from "@remix-run/react"
 
 export const clientLoader = async ({ request }) => {
   return request.url.split('fontaine/')[1]
@@ -37,7 +35,6 @@ export default function App() {
   return (
     <div className="main">
       <div className="main-content">
-        <NavBar route={useLoaderData()} />
         <Outlet />
       </div>
     </div>
