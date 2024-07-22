@@ -6,6 +6,13 @@ import {
   Scripts,
   ScrollRestoration
 } from "@remix-run/react"
+import NavBar from "./comps/Navbar"
+import "../styles.scss"
+import { useLoaderData } from "@remix-run/react"
+
+export const clientLoader = async ({ request }) => {
+  return request.url.split('Fontaine/')[1]
+}
 
 export function Layout({ children }) {
   return (
@@ -25,8 +32,16 @@ export function Layout({ children }) {
   )
 }
 
+
 export default function App() {
-  return <Outlet />
+  return (
+    <div className="main">
+      <div className="main-content">
+        <NavBar route={useLoaderData()} />
+        <Outlet />
+      </div>
+    </div>
+)
 }
 
 export function HydrateFallback() {
