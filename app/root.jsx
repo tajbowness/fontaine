@@ -11,7 +11,7 @@ import "../styles.scss"
 import { useLoaderData } from "@remix-run/react"
 
 export const clientLoader = async ({ request }) => {
-  return request.url.split('Fontaine/')[1]
+  return request.url.split('fontaine/')[1]
 }
 
 export function Layout({ children }) {
