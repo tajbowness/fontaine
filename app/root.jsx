@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
-import "./tailwind.css";
+  ScrollRestoration
+} from "@remix-run/react"
 
 export function Layout({ children }) {
   return (
@@ -22,9 +22,13 @@ export function Layout({ children }) {
         <Scripts />
       </body>
     </html>
-  );
+  )
 }
 
 export default function App() {
-  return <Outlet />;
+  return <Outlet />
+}
+
+export function HydrateFallback() {
+  return <p>Loading...</p>
 }
