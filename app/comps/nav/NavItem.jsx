@@ -7,7 +7,7 @@ export default function NavItem(props) {
             props.setPage(props.text.toLowerCase())
         }}
         >
-            {props.text}
+            {props.titleOR || props.text}
         </p>
     )
 }
