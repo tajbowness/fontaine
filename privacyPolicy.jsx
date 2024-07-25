@@ -29,7 +29,7 @@ Google Analytics: Used to collect and analyze usage data to improve the app's pe
 I retain the collected data as follows:
 
 General Data: Most data is deleted after 30 days of inactivity. All data excluding user data is deleted upon uninstall.
-User Data: Users can request deletion of their data at any time, and I will process such requests promptly. User data will be deleted after 30 days of inactivity.
+User Data: Users can request deletion of their data at any time, and I will process such requests promptly.
 
 [Privacy Policy Changes]
 I may update this privacy policy from time to time in order to reflect, for example, changes to the practices or for other operational, legal or regulatory reasons. 
