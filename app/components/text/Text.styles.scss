@@ -1,0 +1,105 @@
+    @use 'styles';
+
+.text-nowrap {
+    white-space: nowrap;
+    min-height: 20px;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;    
+}
+
+.text-scroll {
+    overflow: auto;
+    min-height: 20px;
+}
+
+// ======= Style =======
+
+.text-thin { font-weight: 300 }
+
+.text-bold { font-weight: 600 }
+
+.text-italic {font-style: italic}
+
+// ======= Label =======
+
+.label {
+    @extend .flex-cen;
+    border-radius: 10px;
+    padding: 2px 7px;
+    margin-right: 10px;
+    width: fit-content;
+}
+
+.label-grey {
+    background-color: var(--surface-quaternary);
+    color: var(--text-color-secondary);
+}
+
+.label-blue {
+    background-color: var(--info-secondary);
+    color: var(--info-text);
+}
+
+.label-success {
+    background-color: var(--success-surface);
+    color: var(--success-text);
+}
+
+.label-warn {
+    background-color: var(--warning-fill-secondary);
+    color: var(--warning-text);
+}
+
+.label-crit {
+    background-color: var(--critical-surface);
+    color: var(--critical-text);
+}
+
+// ======= Body =======
+
+.text-body-1 {
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    font-size: var(--fs-small);
+}
+
+.text-body-2 {
+    line-height: 1.3;
+    letter-spacing: 0.009071em;
+    font-size: var(--fs-x-small);
+}
+
+// ======= Size =======
+
+.text-heading-1 {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 0px 0px 0.35em;
+}
+
+.text-heading-2 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin: 0px 0px 0.35em;
+}
+
+.text-heading-3 {
+    font-size: 1.20rem;
+    line-height: 1.2;
+    margin: 0px 0px 0.35em;
+}
+
+.text-heading-4 {
+    font-size: 1.15rem;
+    line-height: 1.1;
+    margin: 0px 0px 0.35em;
+}
+
+.text-heading-5 {
+    font-size: 1.10rem;
+    margin: 0px 0px 0.35em;
+}

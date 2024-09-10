@@ -1,9 +1,12 @@
 import React, {useState} from "react"
-import NavBar from "../comps/Navbar"
-import "../../styles.scss"
 import { useLoaderData } from "@remix-run/react"
+import NavBar from "../containers/Navbar"
 import Home from "../pages/home"
+import ChangeLog from "../containers/changelog/ChangeLog"
 import Privacy from "../pages/privacy"
+import GettingStarted from "../containers/getting-started/GettingStarted"
+import "../../styles.scss"
+import "@shopify/polaris/build/esm/styles.css";
 
 export const meta = () => {
   return [
@@ -21,11 +24,17 @@ export default function Index() {
   return (
     <>
     <NavBar route={page} setPage={setPage} />
-    {page === "home" ? (
-      <Home />
-    ) : (
+    {page === "home" ? 
+      <Home setPage={setPage} />
+    :
+    page === "changelog" ?
+      <ChangeLog /> 
+    :
+    page === "gettingstartedsku" ?
+      <GettingStarted />
+    :
       <Privacy />
-    )}
+    }
     </>
   )
 }

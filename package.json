@@ -12,12 +12,18 @@
     "start": "--open-page fontaine"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
+    "@mui/material": "^6.0.2",
     "@remix-run/node": "^2.10.3",
     "@remix-run/react": "^2.10.3",
+    "@shopify/polaris": "^13.9.0",
+    "@shopify/polaris-icons": "^9.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "sass": "^1.77.8"
   },
   "devDependencies": {

@@ -1,0 +1,27 @@
+@use 'styles';
+
+.error-fallback {
+    @extend .flex-cen, .ali-cen;
+    align-content: center;
+}
+
+.error-fallback-container {
+    @extend .error-fallback;
+    height: 100% !important;
+    width: 100% !important; 
+}
+
+.error-small {
+    height: auto !important;
+    width: auto !important;
+}
+
+.error-text {
+    color: var(--critical);
+    font-weight: bold;
+}
+
+.error-redBack {
+    background-color: var(--critical-surface);
+    border: 1px solid var(--critical-surface-border);
+}

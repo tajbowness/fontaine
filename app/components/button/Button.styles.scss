@@ -1,0 +1,223 @@
+@use 'styles';
+
+.button {
+    @extend .flex-cen, .ali-cen;
+    align-content: center;
+    text-wrap: nowrap;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px 8px 20px;
+    gap: 10px;
+    line-height: 20px;
+    background-color: var(--button-unselected);
+    color: var(--text-color);
+    transition: all 0.3s, border 0s; // For sidecar
+}
+
+.button-container {
+    @extend .flex-cen, .ali-cen;
+}
+
+.button-container-child {
+    @extend .ali-cen;
+    flex-direction: row-reverse;
+}
+
+// ======= Only Icon =======
+
+.only-icon {
+    background-color: inherit !important;
+    border-radius: 20px;
+    & .icon-reach {
+        transition: 0.15s;
+    }
+    &:hover {
+        box-shadow: var(--bs-shadow2) !important;
+    }
+}
+
+// ======= Thickness =======
+
+.fitted {
+    padding: 3px 6px !important;
+}
+
+.slim {
+    padding: 5px 10px !important;    
+}
+
+.thick {
+    padding: 11px 15px !important;
+}
+
+// ======= Level =======
+
+.button-success {
+    background-color: var(--success-fill);
+    color: var(--success-secondary);
+    & path {
+        color: var(--success-secondary) !important // 4 Icon
+    }
+    &:hover {
+        background-color: var(--success-fill-hover) !important
+    }
+}
+
+.button-warn {
+    background-color: var(--warning-fill);
+    color: var(--warning-text);
+    & path {
+        color: var(--warning-text) !important // 4 Icon
+    }
+    &:hover {
+        background-color: var(--warning-fill-hover) !important
+    }
+}
+
+.button-crit {
+    background-color: var(--critical);
+    color: white !important;
+    & path {
+        color: var(--critical-icon) !important // 4 Icon
+    }
+    &:hover {
+        background-color: var(--critical-hover) !important
+    }
+}
+
+// ======= Level Sidecar =======
+
+.button-success-sidecar {
+    background-color: var(--success-secondary) !important;
+    color: var(--success-text-secondary) !important;
+}
+
+.button-warn-sidecar {
+    background-color: var(--warning-fill-secondary) !important;
+    color: var(--warning-text);
+}
+
+
+.button-crit-sidecar {
+    background-color: var(--critical-secordary) !important;
+    color: white !important;
+}
+
+// ======= Hover =======
+
+.button-hover-primary:hover {background-color: var(--primary-color) !important}
+.button-hover-grey:hover {
+    background-color: var(--button-unselected-hover);
+    box-shadow: var(--bs-shadow1);
+}
+
+.button-no-hover:hover {
+    background-color: var(--surface-secondary);
+    box-shadow: none;
+}
+
+// ======= Skeleton =======
+
+.button-skeleton {
+    @extend .button;
+    min-height: 20px;
+    line-height: 20px;
+    padding: 8px 15px;
+}
+
+// ======= Disabled =======
+
+.button-disable {
+    background-color: var(--surface-disable-button);
+    color: var(--text-color-secondary);
+    pointer-events: none;
+    cursor: default;
+}
+
+// ======= Width =======
+
+.button-width-xs {width: clamp(60px, 80px, 100px) !important}
+.button-width-s  {width: clamp(80px, 100px, 120px) !important}
+.button-width-m  {width: clamp(100px, 150px, 2000px) !important}
+.button-width-l  {width: clamp(150px, 225px, 250px) !important}
+
+// ======= Icon =======
+
+.no-icon {padding: 8px 15px 8px 15px}
+
+.icon-left {
+    flex-direction: row-reverse;
+    padding: 8px 15px 8px 12px;
+}
+
+.icon-right { padding: 8px 15px 8px 20px }
+
+// ======= Toggled =======
+
+.toggled-primary { 
+    background-color: var(--button-selected) !important;
+    &:hover { box-shadow: var(--bs-shadow2-s) !important }
+}
+
+.toggled-grey { 
+    background-color: var(--surface-border) !important;
+    &:hover { box-shadow: var(--bs-shadow2) }
+}
+
+// ======= Side Cars =======
+
+.car-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.button-container-undercard-sidecar {flex-direction: column}
+.button-container-right-sidecar {flex-direction: row}
+
+.side-car-container {
+    display: flex;
+    text-wrap: nowrap;
+    width: 100%;
+    padding: 8px;
+    background-color: var(--surface-secondary);
+    & span {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+}
+
+.right-sidecar {
+    border-radius: 0px 5px 5px 0px;
+    padding-right: 15px;
+}
+
+.left-sidecar {
+    border-radius: 5px 0px 0px 5px;
+    padding-left: 15px;
+}
+
+.undercar {
+    border-radius: 0px 0px 5px 5px;
+    justify-content: center;
+}
+
+.button-container-child-left-sidecar:hover .button {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.button-container-child-right-sidecar:hover .button {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.button-container-child-undercar:hover .button {
+    border-radius: 5px 5px 0px 0px;
+}
+
+// To put line border on grey level buttons.
+.grey-l-side:hover .button {border-left: 1px solid var(--surface-border)}
+
+.grey-r-side:hover .button {border-right: 1px solid var(--surface-border)}
+
+.grey-b-side:hover .button {border-bottom: 1px solid var(--surface-border)}

@@ -22,7 +22,7 @@ The data is acquired by Shopifys API. The merchants shop name can be changed by 
 The information is shared with the following third parties to help provide and improve services:
 
 Intercom: Used for customer service.
-Sentry IO: Used for error handling and debugging.
+BetterStack: Used for error handling and debugging.
 Google Analytics: Used to collect and analyze usage data to improve the app's performance and user experience.
 
 [Data Retention]

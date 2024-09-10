@@ -1,10 +1,10 @@
-import AppCard from "../comps/home/AppCard"
+import AppCard from "../containers/home/AppCard"
 
-export default function Home() {
+export default function Home(props) {
     return (
         <div className="home-main">
-            <AppCard title="SKU Manager" color="rgb(253, 253, 150)" released/>
-            <AppCard title="In Development" color="rgb(227, 93, 89)" development/>
+            <AppCard title="SKU Manager" className="sku" sku released {...props} />
+            <AppCard title="In Development" development/>
             <AppCard color="rgb(168, 148, 212)" suggestion/>
         </div>
     )

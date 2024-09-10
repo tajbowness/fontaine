@@ -1,0 +1,34 @@
+@use 'styles';
+
+.accord-head {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.25s;
+    &:hover {
+        background-color: var(--surface-secondary);
+    }
+    & span {
+        height: 25px;
+        width: 25px;
+
+    }
+}
+
+.accord-no-hover {
+    background-color: inherit !important;
+}
+// ======= Divider =======
+
+.accord-divider {
+    border-bottom: 1px solid var(--surface-border);
+}
+
+// ======= Child =======
+
+.child {
+    padding: 15px;
+}
+
+.child-divider {
+    border-bottom: 1px solid var(--surface-border);
+}

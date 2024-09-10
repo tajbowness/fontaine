@@ -1,0 +1,44 @@
+@use 'styles';
+
+.modal-overlay {
+    @extend .flex-cen, .ali-cen;
+    position: fixed;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    background-color: rgba(93, 93, 93, 0.6);
+    inset: 0px;
+    z-index: var(--z-modal);
+}
+
+.modal-styles {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 40px;
+    min-width: 400px; // May need to go back to width 400px
+    max-height: calc(-40px + 100vh);
+    border-radius: 5px;
+    outline: 0; // Removes black border upon focus
+    padding: 20px;
+}
+
+.modal-content-container {
+    @extend .flex-cen, .ali-cen;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-buttons-container {
+    @extend .flex-cen;
+    gap: 10px;
+}
+
+.modal-description {
+    text-align: center;
+}
+
+.modal-low-desc {
+    opacity: 0.8;
+    padding-top: 7px;
+}

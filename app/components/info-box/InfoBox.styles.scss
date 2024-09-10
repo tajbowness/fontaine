@@ -1,0 +1,92 @@
+@use 'styles';
+
+.infobox-container {
+    @extend .flex-cen, .ali-cen;
+    justify-content: space-around;
+    position: relative;
+    text-wrap: nowrap;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.infobox-parent {
+    @extend .flex-cen;
+    position: relative;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--info-surface);
+    color: var(--info-text);
+}
+
+.infobox-small-option {
+    padding: 5px 15px !important;
+    border-radius: 5px !important;
+}
+
+.infobox-super-small {
+    padding: 3px 7px 2px 7px;
+    border-radius: 5px !important;
+}
+
+.infobox-icon-left {
+    justify-content: space-between !important;
+}
+
+.infobox-grey {
+    background-color: var(--surface-tertiary);
+    color: var(--text-color);
+}
+
+.infobox-success {
+    background-color: var(--success-surface);
+    color: var(--text-color);
+}
+
+.infobox-warn {
+    background-color: var(--warning-surface) !important;
+    color: var(--warning-text);
+    font-weight: 400;
+}
+
+.infobox-crit {
+    background-color: var(--critical-surface);
+    color: var(--critical-text);
+    font-weight: 500;
+}
+
+.infobox-p {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+// ======= Sizes =======
+
+.infobox-x-small { max-width: 5vw }; // 21 : 9
+.infobox-small   { max-width: 10vw }; // 21 : 9
+.infobox-medium  { max-width: 15vw }; // 21 : 9
+.infobox-large   { max-width: 25vw }; // 21 : 9
+.infobox-x-large { max-width: 30vw }; // 21 : 9
+
+
+@media only screen and (max-width: 2000px) {
+    .infobox-x-small { max-width: 10vw }; // 16 : 9
+    .infobox-small   { max-width: 15vw }; // 16 : 9
+    .infobox-medium  { max-width: 20vw }; // 16 : 9
+    .infobox-large   { max-width: 30vw }; // 16 : 9
+    .infobox-x-large { max-width: 40vw }; // 16 : 9
+}
+
+// ======= Height =======
+
+.height-setup {
+    overflow: auto;
+    justify-content: normal !important;
+}
+
+.infobox-h-x-small { max-height: 5em  }; // 21 : 9
+.infobox-h-small   { max-height: 7em }; // 21 : 9
+.infobox-h-medium  { max-height: 10em }; // 21 : 9
+.infobox-h-large   { max-height: 15em }; // 21 : 9
+.infobox-h-x-large { max-height: 20em }; // 21 : 9

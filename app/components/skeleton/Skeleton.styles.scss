@@ -1,0 +1,76 @@
+@use 'styles';
+
+.skeleton-style {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.skeleton-large {
+    background-color: var(--surface-tertiary);
+    border-radius: 10px;
+}
+
+.skeleton-text {
+    background-color: var(--surface-disable);
+    width: 100%;
+    min-width: 5ch;
+    min-height: 1em;
+    border-radius: 9px;
+    display: flex;
+}
+
+.skeleton-text-sim {
+    opacity: 0;
+}
+
+
+.skeleton-icon {
+    background-color: var(--surface-quinary);
+    min-height: 15px;
+    max-height: 15px;
+    max-width: 15px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50px;
+}
+
+// ======= Modal =======
+
+.skeleton-modal {
+    @extend .flex-cen, .ali-cen;
+    position: fixed;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    background-color: rgba(93, 93, 93, 0.6);
+    inset: 0px;
+    z-index: var(--z-modal);
+
+}
+
+.skeleton-modal-child {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 40px;
+    min-width: 400px; // May need to go back to width 400px
+    max-height: calc(-40px + 100vh);
+    border-radius: 5px;
+    outline: 0; // Removes black border upon focus
+    padding: 20px;
+}
+
+.skeleton-modal-small {
+    min-width: 400px;
+    min-height: 200px;
+}
+
+.skeleton-modal-medium {
+    min-width: 500px;
+    min-height: 300px;
+}
+
+.skeleton-modal-large {
+    min-width: 600px;
+    min-height: 450px;
+}
