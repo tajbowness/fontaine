@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration
 } from "@remix-run/react"
+import { useEffect } from 'react';
 import "../styles.scss"
 
 export const clientLoader = async ({ request }) => {
@@ -13,6 +14,17 @@ export const clientLoader = async ({ request }) => {
 }
 
 export function Layout({ children }) {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8ELQF312TZ');
+    `;
+    document.head.appendChild(script);
+  }, []);
+
   return (
     <html lang="en">
       <head>
