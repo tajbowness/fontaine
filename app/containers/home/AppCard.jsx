@@ -9,7 +9,7 @@ export default function AppCard(props) {
                 <Box col className={"ali-cen"}>
                     {props.sku ?
                     <Box col center>
-                        <img src="SKULOGO.png" width={150}/>
+                        <img src="https://cdn.shopify.com/app-store/listing_images/280a5f68dfd1c6bd0d3a266181b83b02/icon/CKvujfnw7ocDEAE=.png" width={150}/>
                         <Box align={"cen"} pad={10}>
                             <Text body2 align={"cen"} className={"mar-0"}>Automate SKU & Barcodes creation, detect duplicates, and customize effortlessly.</Text>
                         </Box>
