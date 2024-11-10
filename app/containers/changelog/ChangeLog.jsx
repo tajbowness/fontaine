@@ -3,7 +3,7 @@ import Text from "../../components/text/Text";
 import Accordion from "../../components/accordion/Accordion"
 import Divider from "../../components/divider/Divider"
 import Card from "../../components/card/Card"
-import { changelog, upcoming } from './changelog.dump';
+import { changelog } from './changelog.dump';
 
 import "./ChangeLog.styles.scss"
 

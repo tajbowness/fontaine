@@ -15,6 +15,48 @@ export const upcoming = {
 
 export const changelog = [
     {
+        version: "1.6.1",
+        date: "November 1st 2024",
+        new: [
+            "Presets for combo mode",
+            "Option to set separators",
+            <>Guide video for Conditional Mode. <a href="https://www.youtube.com/watch?v=h_pncUbISGY" target="_blank">YouTube</a></>,
+            "Option to name the conditional. Name is then displayed in the conditional box instead of 'Conditional'"
+        ],
+        fixed: [
+            "Minor issues"
+        ]
+    },
+    {
+        version: "1.6.0",
+        date: "October 23rd 2024",
+        new: [
+            "New combo mode, conditional mode! Apply SKUs / Barcodes conditionally based on product title, variant, option title, and more (If variant has Blue then include BLU in SKU)."
+        ],
+        improved: [
+            "UI for Duplicate check / History / Create",
+        ],
+        fixed: [
+            "Finished edit results not displaying when duplicate checking",
+            "Minor issues",
+            "UI inconsistencies"
+        ],
+        note: [
+            "Subscription model has been revised, current paid plan users have been given the highest tier. For more info, please view 'Compare Plans' or consider reaching out to me."
+        ],
+    },
+    {
+        version: "1.5.2",
+        date: "September 23rd 2024",
+        new: [
+            "Popup indicator will appear when product sync is complete"
+        ],
+        fixed: [
+            "Issue occuring when applying a case mode to an empty barcode",
+            "Minor issues"
+        ]
+    },
+    {
         version: "1.5.0",
         date: "September 5th 2024",
         new: [

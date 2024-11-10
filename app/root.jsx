@@ -8,6 +8,12 @@ import {
 } from "@remix-run/react"
 import { useEffect } from 'react';
 import "../styles.scss"
+import TagManager from 'react-gtm-module';
+
+
+const tagManagerArgs = {
+  gtmId: 'G-8ELQF312TZ'
+};
 
 export const clientLoader = async ({ request }) => {
   return request.url.split('fontaine/')[1]
@@ -44,6 +50,10 @@ export function Layout({ children }) {
 
 
 export default function App() {
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs);
+  }, []);
+
   return (
     <div className="main">
       <div className="main-content">
