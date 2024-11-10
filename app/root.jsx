@@ -15,6 +15,12 @@ const tagManagerArgs = {
   gtmId: 'G-8ELQF312TZ'
 };
 
+export function links() {
+  return [
+    { rel: "icon", href: "./public/favicon.ico" }
+  ];
+}
+
 export const clientLoader = async ({ request }) => {
   return request.url.split('fontaine/')[1]
 }
